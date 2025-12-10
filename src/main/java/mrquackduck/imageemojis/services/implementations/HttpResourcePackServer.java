@@ -14,7 +14,7 @@ public class HttpResourcePackServer implements IHttpResourcePackServer {
 
     public HttpResourcePackServer(int port, File resourcePackFile, String path) throws IOException {
         // Create HTTP server
-        server = HttpServer.create(new InetSocketAddress(port), 0);
+        server = HttpServer.create(new InetSocketAddress(port), 25570);
 
         // Define handler for all requests
         server.createContext(path, exchange -> {
